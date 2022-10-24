@@ -5,6 +5,7 @@ from textwrap import dedent
 from typing import NewType, Optional
 
 DEFAULT_PIPX_HOME = Path.home() / ".local/pipx"
+NEW_PIPX_HOME = os.path.expandvars('$XDG_DATA_HOME') / ".local/pipx"
 DEFAULT_PIPX_BIN_DIR = Path.home() / ".local/bin"
 PIPX_HOME = Path(os.environ.get("PIPX_HOME", DEFAULT_PIPX_HOME)).resolve()
 PIPX_LOCAL_VENVS = PIPX_HOME / "venvs"
